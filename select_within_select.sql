@@ -26,7 +26,7 @@ ORDER by name
  --#4 
  # Which country has a population that is more than Canada but less than Poland? Show the name and the population.
  
- SELECT name, population FROM world 
+SELECT name, population FROM world 
 WHERE population > 
      (SELECT population FROM world WHERE name = 'Canada')
 AND population < 
@@ -44,8 +44,8 @@ WHERE continent = 'Europe'
 
 SELECT name FROM world 
 WHERE gdp > ALL 
-    ( SELECT gdp FROM world
-      WHERE gdp > 0 AND continent='Europe') 
+    (SELECT gdp FROM world
+     WHERE gdp > 0 AND continent='Europe') 
  
 --#7
 #Find the largest country (by area) in each continent, show the continent, the name and the area
